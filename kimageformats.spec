@@ -16,6 +16,8 @@ BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Widgets)
 BuildRequires: qmake5
 BuildRequires: extra-cmake-modules5
+BuildRequires: pkgconfig(jasper)
+BuildRequires: pkgconfig(OpenEXR)
 
 %description
 Qt5 support for handling various additional image formats
