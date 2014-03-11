@@ -33,7 +33,6 @@ Qt5 support for handling various additional image formats
 %{expand:%(sh %{SOURCE10} rgb)}
 %{expand:%(sh %{SOURCE10} tga)}
 %{expand:%(sh %{SOURCE10} xcf)}
-%{expand:%(sh %{SOURCE10} xview xv)}
 
 %prep
 %setup -q
