@@ -12,5 +12,5 @@ Qt 5.x support for images in the ${FORMAT} format
 
 %files ${FORMAT}
 %{_libdir}/qt5/plugins/imageformats/kimg_${FORMAT}.so
-%{_datadir}/kde5/services/qimageioplugins/${SHORTFORMAT}.desktop
+%{_datadir}/kservices5/qimageioplugins/${SHORTFORMAT}.desktop
 EOF
