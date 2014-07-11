@@ -2,9 +2,9 @@
 %define debug_package %{nil}
 
 Name: kimageformats
-Version: 4.99.0
-Release: 2
-Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/%{version}/%{name}-%{version}.tar.xz
+Version: 5.0.0
+Release: 1
+Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/frameworks/%{version}/%{name}-%{version}.tar.xz
 Source10: imageformat-package
 Source20: %{name}.rpmlintrc
 Summary: Qt5 support for handling various additional image formats
