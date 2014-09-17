@@ -2,7 +2,7 @@
 %define debug_package %{nil}
 
 Name: kimageformats
-Version: 5.1.0
+Version: 5.2.0
 Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/frameworks/%{version}/%{name}-%{version}.tar.xz
 Source10: imageformat-package
