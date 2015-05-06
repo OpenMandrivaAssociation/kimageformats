@@ -12,14 +12,22 @@ Summary: Qt5 support for handling various additional image formats
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
-BuildRequires: cmake
-BuildRequires: ninja
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Widgets)
-BuildRequires: qmake5
-BuildRequires: extra-cmake-modules5
+BuildRequires: cmake(ECM)
 BuildRequires: pkgconfig(jasper)
 BuildRequires: pkgconfig(OpenEXR)
+Requires: %{name}-dds = %{EVRD}
+Requires: %{name}-eps = %{EVRD}
+Requires: %{name}-exr = %{EVRD}
+Requires: %{name}-jp2 = %{EVRD}
+Requires: %{name}-pcx = %{EVRD}
+Requires: %{name}-pic = %{EVRD}
+Requires: %{name}-psd = %{EVRD}
+Requires: %{name}-ras = %{EVRD}
+Requires: %{name}-rgb = %{EVRD}
+Requires: %{name}-tga = %{EVRD}
+Requires: %{name}-xcf = %{EVRD}
 
 %description
 Qt5 support for handling various additional image formats.
@@ -38,11 +46,12 @@ Qt5 support for handling various additional image formats.
 
 %prep
 %setup -q
-%cmake -G Ninja \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+%cmake_kde5
 
 %build
-ninja -C build
+%ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja -C build install
+%ninja_install -C build
+
+%files
