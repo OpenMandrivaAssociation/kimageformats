@@ -14,6 +14,7 @@ License: GPL
 Group: System/Libraries
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Widgets)
+BuildRequires: pkgconfig(Qt5PrintSupport)
 BuildRequires: cmake(ECM)
 BuildRequires: pkgconfig(jasper)
 BuildRequires: pkgconfig(OpenEXR)
