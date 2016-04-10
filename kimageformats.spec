@@ -3,8 +3,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kimageformats
-Version:	5.20.0
-Release:	3
+Version:	5.21.0
+Release:	1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Source10: imageformat-package
 Source20: %{name}.rpmlintrc
@@ -37,9 +37,11 @@ Qt5 support for handling various additional image formats.
 %{expand:%(sh %{SOURCE10} eps)}
 %{expand:%(sh %{SOURCE10} exr)}
 %{expand:%(sh %{SOURCE10} jp2)}
+%{expand:%(sh %{SOURCE10} kra)}
 %{expand:%(sh %{SOURCE10} pcx)}
 %{expand:%(sh %{SOURCE10} pic)}
 %{expand:%(sh %{SOURCE10} psd)}
+%{expand:%(sh %{SOURCE10} ora)}
 %{expand:%(sh %{SOURCE10} ras)}
 %{expand:%(sh %{SOURCE10} rgb)}
 %{expand:%(sh %{SOURCE10} tga)}
