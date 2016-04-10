@@ -15,7 +15,9 @@ Group: System/Libraries
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Widgets)
 BuildRequires: pkgconfig(Qt5PrintSupport)
+BuildRequires: pkgconfig(Qt5Test)
 BuildRequires: cmake(ECM)
+BuildRequires: cmake(KF5Archive)
 BuildRequires: pkgconfig(jasper)
 BuildRequires: pkgconfig(OpenEXR)
 Requires: %{name}-dds = %{EVRD}
