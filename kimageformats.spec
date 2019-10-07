@@ -3,7 +3,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kimageformats
-Version:	5.62.0
+Version:	5.63.0
 Release:	1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Source10: imageformat-package
@@ -23,6 +23,7 @@ BuildRequires: pkgconfig(OpenEXR)
 Requires: %{name}-dds = %{EVRD}
 Requires: %{name}-eps = %{EVRD}
 Requires: %{name}-exr = %{EVRD}
+Requires: %{name}-hdr = %{EVRD}
 Requires: %{name}-jp2 = %{EVRD}
 Requires: %{name}-pcx = %{EVRD}
 Requires: %{name}-pic = %{EVRD}
@@ -38,6 +39,7 @@ Qt5 support for handling various additional image formats.
 %{expand:%(sh %{SOURCE10} dds)}
 %{expand:%(sh %{SOURCE10} eps)}
 %{expand:%(sh %{SOURCE10} exr)}
+%{expand:%(sh %{SOURCE10} hdr)}
 %{expand:%(sh %{SOURCE10} jp2)}
 %{expand:%(sh %{SOURCE10} kra)}
 %{expand:%(sh %{SOURCE10} pcx)}
