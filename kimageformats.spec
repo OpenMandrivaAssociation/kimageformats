@@ -4,7 +4,7 @@
 
 Name: kimageformats
 Version:	5.67.0
-Release:	2
+Release:	3
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Source10: imageformat-package
 Source20: %{name}.rpmlintrc
