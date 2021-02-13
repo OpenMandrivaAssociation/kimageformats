@@ -3,7 +3,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kimageformats
-Version:	5.78.0
+Version:	5.79.0
 Release:	1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Source10: imageformat-package
@@ -20,6 +20,9 @@ BuildRequires: cmake(ECM)
 BuildRequires: cmake(KF5Archive)
 BuildRequires: pkgconfig(jasper)
 BuildRequires: pkgconfig(OpenEXR)
+BuildRequires: pkgconfig(libavif)
+Requires: %{name}-ani = %{EVRD}
+Requires: %{name}-avif = %{EVRD}
 Requires: %{name}-dds = %{EVRD}
 Requires: %{name}-eps = %{EVRD}
 Requires: %{name}-exr = %{EVRD}
@@ -36,6 +39,8 @@ Requires: %{name}-xcf = %{EVRD}
 %description
 Qt5 support for handling various additional image formats.
 
+%{expand:%(sh %{SOURCE10} ani)}
+%{expand:%(sh %{SOURCE10} avif)}
 %{expand:%(sh %{SOURCE10} dds)}
 %{expand:%(sh %{SOURCE10} eps)}
 %{expand:%(sh %{SOURCE10} exr)}
