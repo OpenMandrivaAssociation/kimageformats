@@ -20,6 +20,7 @@ BuildRequires: cmake(KF5Archive)
 BuildRequires: pkgconfig(jasper)
 BuildRequires: pkgconfig(OpenEXR)
 BuildRequires: pkgconfig(libavif)
+BuildRequires: pkgconfig(zlib)
 Requires: %{name}-ani = %{EVRD}
 Requires: %{name}-avif = %{EVRD}
 Requires: %{name}-dds = %{EVRD}
