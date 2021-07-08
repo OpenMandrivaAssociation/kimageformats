@@ -20,6 +20,7 @@ BuildRequires: cmake(KF5Archive)
 BuildRequires: pkgconfig(jasper)
 BuildRequires: pkgconfig(OpenEXR)
 BuildRequires: pkgconfig(libavif)
+BuildRequires: pkgconfig(zlib)
 Requires: %{name}-ani = %{EVRD}
 Requires: %{name}-avif = %{EVRD}
 Requires: %{name}-dds = %{EVRD}
@@ -56,7 +57,7 @@ Qt5 support for handling various additional image formats.
 %{expand:%(sh %{SOURCE10} xcf)}
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build
