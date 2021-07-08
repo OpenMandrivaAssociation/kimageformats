@@ -57,7 +57,7 @@ Qt5 support for handling various additional image formats.
 %{expand:%(sh %{SOURCE10} xcf)}
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build
