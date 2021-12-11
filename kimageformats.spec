@@ -2,7 +2,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kimageformats
-Version:	5.88.0
+Version:	5.89.0
 Release:	1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Source10: imageformat-package
@@ -21,6 +21,7 @@ BuildRequires: pkgconfig(jasper)
 BuildRequires: pkgconfig(OpenEXR)
 BuildRequires: pkgconfig(libavif)
 BuildRequires: pkgconfig(zlib)
+BuildRequires: pkgconfig(libjxl)
 Requires: %{name}-ani = %{EVRD}
 Requires: %{name}-avif = %{EVRD}
 Requires: %{name}-dds = %{EVRD}
@@ -28,6 +29,7 @@ Requires: %{name}-eps = %{EVRD}
 Requires: %{name}-exr = %{EVRD}
 Requires: %{name}-hdr = %{EVRD}
 Requires: %{name}-jp2 = %{EVRD}
+Requires: %{name}-jxl = %{EVRD}
 Requires: %{name}-pcx = %{EVRD}
 Requires: %{name}-pic = %{EVRD}
 Requires: %{name}-psd = %{EVRD}
@@ -46,6 +48,7 @@ Qt5 support for handling various additional image formats.
 %{expand:%(sh %{SOURCE10} exr)}
 %{expand:%(sh %{SOURCE10} hdr)}
 %{expand:%(sh %{SOURCE10} jp2)}
+%{expand:%(sh %{SOURCE10} jxl)}
 %{expand:%(sh %{SOURCE10} kra)}
 %{expand:%(sh %{SOURCE10} pcx)}
 %{expand:%(sh %{SOURCE10} pic)}
