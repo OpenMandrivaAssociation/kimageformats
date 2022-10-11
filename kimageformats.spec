@@ -22,6 +22,8 @@ BuildRequires: pkgconfig(OpenEXR)
 BuildRequires: pkgconfig(libavif)
 BuildRequires: pkgconfig(zlib)
 BuildRequires: pkgconfig(libjxl)
+BuildRequires: pkgconfig(libraw)
+BuildRequires: pkgconfig(libopenjp2)
 Requires: %{name}-ani = %{EVRD}
 Requires: %{name}-avif = %{EVRD}
 Requires: %{name}-dds = %{EVRD}
