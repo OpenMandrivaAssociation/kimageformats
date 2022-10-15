@@ -3,10 +3,11 @@
 
 Name: kimageformats
 Version:	5.99.0
-Release:	2
+Release:	3
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Source10: imageformat-package
 Source20: %{name}.rpmlintrc
+Patch0: kimageformats-5.99.0-libavif-0.11.patch
 Summary: Qt5 support for handling various additional image formats
 URL: http://kde.org/
 License: GPL
