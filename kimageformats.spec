@@ -7,6 +7,10 @@ Release:	2
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Source10: imageformat-package
 Source20: %{name}.rpmlintrc
+
+# Support for libavif 1.0.0
+Patch: https://invent.kde.org/frameworks/kimageformats/-/commit/4badb3088e90d86208ed6bd435df7fe6a022be64.patch
+
 Summary: Qt5 support for handling various additional image formats
 URL: http://kde.org/
 License: GPL
