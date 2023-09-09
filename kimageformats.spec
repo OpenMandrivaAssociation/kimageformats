@@ -2,15 +2,11 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kimageformats
-Version:	5.109.0
-Release:	2
+Version:	5.110.0
+Release:	1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Source10: imageformat-package
 Source20: %{name}.rpmlintrc
-
-# Support for libavif 1.0.0
-Patch: https://invent.kde.org/frameworks/kimageformats/-/commit/4badb3088e90d86208ed6bd435df7fe6a022be64.patch
-
 Summary: Qt5 support for handling various additional image formats
 URL: http://kde.org/
 License: GPL
@@ -39,6 +35,8 @@ Requires: %{name}-jxl = %{EVRD}
 Requires: %{name}-pcx = %{EVRD}
 Requires: %{name}-pic = %{EVRD}
 Requires: %{name}-psd = %{EVRD}
+Requires: %{name}-qoi = %{EVRD}
+Requires: %{name}-ora = %{EVRD}
 Requires: %{name}-ras = %{EVRD}
 Requires: %{name}-raw = %{EVRD}
 Requires: %{name}-rgb = %{EVRD}
@@ -61,6 +59,7 @@ Qt5 support for handling various additional image formats.
 %{expand:%(sh %{SOURCE10} pic)}
 %{expand:%(sh %{SOURCE10} psd)}
 %{expand:%(sh %{SOURCE10} ora)}
+%{expand:%(sh %{SOURCE10} qoi)}
 %{expand:%(sh %{SOURCE10} ras)}
 %{expand:%(sh %{SOURCE10} raw)}
 %{expand:%(sh %{SOURCE10} rgb)}
