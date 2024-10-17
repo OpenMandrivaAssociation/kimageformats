@@ -8,7 +8,7 @@ Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d.
 Source10: imageformat-package
 Source20: %{name}.rpmlintrc
 Summary: Qt5 support for handling various additional image formats
-URL: http://kde.org/
+URL: https://kde.org/
 License: GPL
 Group: System/Libraries
 BuildRequires: pkgconfig(Qt5Core)
